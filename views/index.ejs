@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+    High Scores
+    <ul class="quotes">
+      <% for(var i=0; i<scores.length; i++) {%>
+        <li class="score">
+          <span><%= scores[i].name %></span>
+          <span><%= scores[i].score %></span>
+        </li>
+      <% } %>
+    </ul>
+
+  <form action="/scores" method="POST">
+  <input type="text" placeholder="name" name="name">
+  <input type="text" placeholder="score" name="score">
+  <button type="submit">Submit</button>
+</form>
+<div>
+  <h2>add new score</h2>
+  <button id="update"> Darth Vadar invades! </button>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
